@@ -1,3 +1,4 @@
+
 def quicksort(list):
     
     first_list=[] 
@@ -11,10 +12,10 @@ def quicksort(list):
         
         for i in list:
             if i < pivot:
-                first_list.append(i) #如果元素<基準點,則放入first_list
+                first_list.append(i)  #如果元素<基準點,則放入first_list
             elif i == pivot:
                 second_list.append(i) #如果元素=基準點,則放入second_list
             else:
-                third_list.append(i) #如果元素>基準點,則放入third_list
+                third_list.append(i)  #如果元素>基準點,則放入third_list
                 
     return quicksort(first_list)+second_list+quicksort(third_list) #回傳list中的值
