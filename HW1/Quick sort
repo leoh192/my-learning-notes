@@ -1,0 +1,20 @@
+def quicksort(list):
+    
+    first_list=[] 
+    second_list=[]
+    third_list=[]  #創建3個list
+    
+    if len(list)<=1:
+        return list #如果list裡的元素<=1,則直接回傳不須比較
+    else:
+        pivot=list[-1] #把list最右邊的元素當成基準點比較
+        
+        for i in list:
+            if i < pivot:
+                first_list.append(i) #如果元素<基準點,則放入first_list
+            elif i == pivot:
+                second_list.append(i) #如果元素=基準點,則放入second_list
+            else:
+                third_list.append(i) #如果元素>基準點,則放入third_list
+                
+    return quicksort(first_list)+second_list+quicksort(third_list) #回傳list中的值
