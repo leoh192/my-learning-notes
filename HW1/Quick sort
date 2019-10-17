@@ -1,9 +1,11 @@
+我的想法是:
+用一個函數，然後創立三個新的list,把(>,=,<)基準點的值分別append到三個新的list裡面,比較完所有數值之後再回傳
 
-def quicksort(list):
+def quicksort(list): #定義一個名為quicksort的函數
     
     first_list=[] 
     second_list=[]
-    third_list=[]  #創建3個list
+    third_list=[]  #創建3個新的list
     
     if len(list)<=1:
         return list #如果list裡的元素<=1,則直接回傳不須比較
