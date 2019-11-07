@@ -43,6 +43,6 @@ def mergesort(array):  #定義一個函數
             i += 1
             j += 1
             
-array = [24, 31, 32, 1, 15, 5, 26]
+array = [24, 31, 32, 1, 15, 5, 26]  #測試執行結果
 mergesort(array)
 print(array)  
