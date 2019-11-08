@@ -47,7 +47,7 @@ Stable sort：是
 
 
 <font face="微软雅黑" size=5  >參考資料
-<font face="微软雅黑" size=3  >
+
 https://emn178.pixnet.net/blog/post/87965707
 https://rust-algo.club/sorting/heapsort/
   
