@@ -1,8 +1,8 @@
-<font face="微软雅黑" size=5  >Merge Sort V.S Heap Sort
+<font face="微软雅黑" size=7  >Merge Sort V.S Heap Sort
   
-<font face="微软雅黑" size=5  > Heap Sort
+<font face="微软雅黑" size=7  > Heap Sort
   
-特點
+<font face="微软雅黑" size=3  >特點
 以陣列表示，但是以完全二元樹的方式理解。
 唯一能夠同時最優地利用空間和時間的方法——最壞情況下也能保證使用 2N \log N2NlogN 次比較和恒定的額外空間。
 在索引從0開始的陣列中：
@@ -20,7 +20,7 @@
 較差的 CPU 快取：heap 不連續存取位址的特性，不利於 CPU 快取。
 
 
-<font face="微软雅黑" size=5  > Merge Sort
+<font face="微软雅黑" size=7  > Merge Sort
   
 <font face="微软雅黑" size=3  >合併排序法(或稱歸併排序法)，是排序演算法的一種，使用Divide and Conquer的演算法來實作。排序時需要額外的空間來處理，過程依照以下步驟進行：
 
@@ -47,6 +47,7 @@ Stable sort：是
 
 
 <font face="微软雅黑" size=5  >參考資料
-<font face="微软雅黑" size=3  >https://emn178.pixnet.net/blog/post/87965707
+<font face="微软雅黑" size=3  >
+https://emn178.pixnet.net/blog/post/87965707
 https://rust-algo.club/sorting/heapsort/
   
