@@ -1,18 +1,13 @@
-# Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self,x):
         self.val = x
         self.left = None
         self.right = None
-        """
-        :type val: int
-        :type left: TreeNode or None
-        :type right: TreeNode or None
-        """
+
 class Solution(object):
     
           
-    def insert(self, root, val):
+    def insert(self,root,val):
         
         if root.val:
             if val <= root.val:
@@ -30,18 +25,52 @@ class Solution(object):
         else:
             root.val = val
             return root
+ 
+    def find_max(self,root):
 
-        """
-        :type root: TreeNode
-        :type val: int
-        :rtype: TreeNode(inserted node)
-        """
-    def delete(self, root, target):
-        """
-        :type root: TreeNode
-        :type target: int
-        :rtype: TreeNode(the root of new completed binary search tree) (cannot search())
-        """
+        now = root
+        while now.right:
+            now = now.right
+        return now
+    
+    def delete(self,root,target):
+
+        if root is None:
+            return root
+        else:
+            if target < root.val:
+                root.left = Solution().delete(root.left,target)
+                return root
+            elif target > root.val:
+                root.right = Solution().delete(root.right,target)
+                return root
+            else:
+                # where root is a leaf node
+                if root.left is None and root.right is None:
+                    root = None
+                    return root
+                if root.right is None or root.left is None:
+                    # when root is a left tree
+                    if root.left:
+                        root = root.left
+                        return root
+                    # when root is a right tree
+                    else:
+                        root = root.right
+                        return root
+                # when root is a binary search tree
+                elif root.left and root.right:
+                    root.val = Solution().find_max(root.left).val
+                    root.left = Solution().delete(self,root.left, root.val)
+            return root
+
+    # print the outcome of the tree
+    def preorder(self, root):
+        if root is not None:
+            print(root.val)
+            self.preorder(root.left)
+            self.preorder(root.right)
+
     def search(self,root,target):
         
         if root is None:
@@ -50,21 +79,19 @@ class Solution(object):
         if  root.val == target: 
             return root 
         
-          elif root.val < target: 
+        elif root.val < target: 
                 return Solution().search(root.right,val) 
     
         else: 
             return Solution().search(root.left,val)
         
             
-        """
-        :type root: TreeNode
-        :type target: int
-        :rtype: TreeNode(searched node)
-        """
+
     def modify(self, root, target, new_val):
-        """
-        :type root: TreeNode
-        :type target: int
-        :type new_val: int
-        :rtype:TreeNode(the root of new completed binary search tree) (cannot search())
+        
+        if root is None:
+            root=TreeNode(new_val)
+        else:
+            Solution().delete(root,target)
+            Solution().insert(root,new_val)
+        return root
