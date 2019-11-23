@@ -95,3 +95,12 @@ class Solution(object):
             Solution().delete(root,target)
             Solution().insert(root,new_val)
         return root
+    
+    
+    
+    參考資料
+    
+    https://stackoverflow.com/questions/58981899/no-return-from-the-deletion-function-of-binary-search-tree
+    https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
+    http://alrightchiu.github.io/SecondRound/binary-tree-traversalxun-fang.html
+    http://cslibrary.stanford.edu/110/BinaryTrees.html#s1
