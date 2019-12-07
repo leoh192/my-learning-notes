@@ -1,1 +1,51 @@
+#Hash Table
 
+是一種輸入字串，然後輸出數字的函數。也就是「將字串對應至數字」。
+
+例：
+
+“Apple” → hash function → 3
+
+作用原理：
+
+1、hash function始終將一個特定的名稱對應於相同的數字，每次輸入 “Apple”，都會得到相同的數字(例如 3)。
+
+2、hash function將不同的字串對應至不同的索引值。例： “Apple” 對應至 3；”Milk” 對應至 4。
+
+3、hash function知道陣列的大小，而且只傳回有效的索引值。
+
+透過hash function與陣列的結合，可得到一個 Hash Table 資料結構。Hash Table又稱為雜湊地圖(Hash Map)、字典(Dictionary)、關聯式陣列(Associative Array)。
+
+###Hash fuction complexity
+
+add
+
+平均情況:O(1)
+
+最壞情況:O(n)
+
+remove
+
+平均情況:O(1)
+
+最壞情況:O(n)
+
+contain
+
+平均情況:O(1)
+
+最壞情況:O(n)
+
+
+
+
+
+
+
+#參考資料
+
+https://carlos-studio.com/2018/01/21/%E6%BC%94%E7%AE%97%E6%B3%95-%E9%9B%9C%E6%B9%8A%E8%A1%A8hash-table/
+
+http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html
+
+https://docs.google.com/presentation/d/e/2PACX-1vT1HO9Nl475k2bR0l1x8_Tr4V5Wzx0BEqp9bpmHckvj8kTeJehhYVlOJUDVPhLQm6kjGCJ_sLMSBUw5/pub?start=false&loop=false&delayms=3000&slide=id.p
